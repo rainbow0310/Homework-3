@@ -1,0 +1,14 @@
+Jamie Barbara
+Question 5 Homework 3
+
+5. a) Explain the process of detecting collisions within Unity in a few sentences.
+	
+	Collisions are detected through colliders that are attached to gameObjects. When the gameObject colliders crash into each other, the gameObjects are checked for a Rigidbody (physics) component. As long as one of the objects has it, the collision is detected and the physics of the collision is applied. Furthermore, the OnCollisionEnter callback is what helps Unity detects collisions that one gameObject makes with another.
+
+b) True or False: When the same C# script is added as a component to multiple game objects to detect collisions, each game object detects its own collisions without interfering with the collisions of the other game objects. Justify your answer.
+
+	True, each collision detection is for one gameObject to recognize that another gameObject has collided into it. This is because each script is attached separately to each gameObject and uses the OnCollisionEnter method to detect objects that collide with the gameObject that has the method. Even if two objects share the same script, that script should separately evaluate each gameObjects' collision without influence of other collisions. 
+
+c) Explain the use of the GetComponent method within Unity.
+
+	GetComponent is a method used to retrieve a reference to a component attached to a gameObject. For example, if you want to access the useGravity property of Rigidbody, you would use GetComponent<Rigidbody>() which accesses the Rigid Body component that houses the useGravity property.
